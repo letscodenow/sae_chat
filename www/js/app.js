@@ -21,6 +21,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
+
   $stateProvider
 
   .state('app', {
@@ -28,6 +29,24 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     abstract: true,
     templateUrl: "templates/menu.html",
     controller: 'AppCtrl'
+  })
+
+  .state('app.room', {
+    url: "/room",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/chatroom.html"
+      }
+    },
+    controller: 'AppCtrl'
+
+  })
+
+  .state('app.room.public', {
+    url: "/public",
+    abstract: true,
+    templateUrl: "templates/menu.html",
+    // controller: 'AppCtrl'
   })
 
   .state('app.search', {
@@ -67,5 +86,5 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/room');
 });

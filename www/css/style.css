@@ -1,1 +1,9 @@
 /* Empty. Add your own CSS if you like */
+
+.yo .item-content {
+  background: #F8F8F8;
+}
+
+.yo-2 {
+  border-top: none;
+}
