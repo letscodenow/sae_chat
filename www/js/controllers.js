@@ -1,6 +1,18 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, socket) {
+        socket.on('init', function (data) {
+            $scope.name = data.name;
+            $scope.users = data.users;
+            console.log('sonnected');
+        });
+
+        socket.on('news', function(data){
+            console.log(data)
+            //socket.emit("lala");
+        })
+
+        socket.emit('chat', "aslkdlakds");
 
 })
 
