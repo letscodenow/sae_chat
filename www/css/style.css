@@ -1,4 +1,4 @@
-/* Empty. Add your own CSS if you like */
+	/* Empty. Add your own CSS if you like */
 
 .yo .item-content {
   background: #F8F8F8;
@@ -6,4 +6,50 @@
 
 .yo-2 {
   border-top: none;
+}
+
+.item div span {
+	position: absolute;
+	right: 30px;
+	bottom: 16px;
+	font-family: 'Helvetica Neue', Roboto, sans-serif;
+	font-size: 14px;
+	color: rgb(102, 102, 102);
+}
+
+.chat .item {
+	border: none;
+}
+
+.chat .item div {
+	float: left !important;
+}
+
+.chat .item div:first-child {
+	width: 20%;
+}
+
+.chat .item div:last-child {
+	width: 75%;
+	border-bottom: 1px solid #c1c1c1;
+	min-height: 72px;
+}
+
+.chat .item div p {
+	overflow: visible;
+	text-overflow: clip;
+	white-space: normal;
+	margin-bottom: 18px;
+}
+
+.page-image {
+	width: 100%;
+}
+
+.inner-content {
+	margin: 20px;
+}
+
+.inner-content h2 {
+	border-bottom: 1px solid #c1c1c1;
 }

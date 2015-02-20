@@ -3,7 +3,6 @@ angular.module('starter.controllers', [])
 .controller('AppCtrl', function($scope, $ionicModal, $timeout, socket,$ionicPlatform) {
 
 
-
         socket.on('init', function (data) {
             $scope.name = data.name;
             $scope.users = data.users;
@@ -20,6 +19,7 @@ angular.module('starter.controllers', [])
 })
 
 .controller('LoginCtrl', function($scope, $cordovaInAppBrowser) {
+    
   //check if user is logged in, and if not go to login procedure
 
         /* var options = {
